@@ -4,24 +4,24 @@ name = "rdil"
 dnssec = true
 provider = "Cloudflare"
 
-[records]
-txt = [
-    [
+[[records]]
+
+[[records.txt]]
+    [[records.txt.git]]
         hostname = "git",
         value = "https://github.com/RDIL",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "@",
-        value = "v=spf1 include:_spf.google.com ~all",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "_dmarc",
-        value = "v=DMARC1; p=quarantine; pct=5; rua=mailto:me@rdil.rocks",
-        cloudflare_is_proxied = true,
-    ]
-]
+        cloudflare_is_proxied = true
+    
+    [[records.txt."@"]]
+        hostname = "@"
+        value = "v=spf1 include:_spf.google.com ~all"
+        cloudflare_is_proxied = true
+    
+    [[records.txt._dmarc]]
+        hostname = "_dmarc"
+        value = "v=DMARC1; p=quarantine; pct=5; rua=mailto:me@rdil.rocks"
+        cloudflare_is_proxied = true
+
 mx = [
     [
         hostname = "@",
