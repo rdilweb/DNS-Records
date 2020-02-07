@@ -1,0 +1,138 @@
+[domain]
+tld = "rocks"
+name = "rdil"
+dnssec = true
+provider = "Cloudflare"
+
+[records]
+
+    txt = [
+        [
+            hostname = "git",
+            value = "https://github.com/RDIL",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "@",
+            value = "v=spf1 include:_spf.google.com ~all",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "_dmarc",
+            value = "v=DMARC1; p=quarantine; pct=5; rua=mailto:me@rdil.rocks",
+            cloudflare_is_proxied = true
+        ]
+    ]
+
+    mx = [
+        [
+            hostname = "@",
+            location = "aspmx.l.google.com",
+            priority = 1
+        ],
+        [
+            hostname = "@",
+            location = "alt1.aspmx.l.google.com",
+            priority = 5
+        ],
+        [
+            hostname = "@",
+            location = "alt2.aspmx.l.google.com",
+            priority = 5
+        ],
+        [
+            hostname = "@",
+            location = "alt3.aspmx.l.google.com",
+            priority = 10
+        ],
+        [
+            hostname = "@",
+            location = "alt4.aspmx.l.google.com",
+            priority = 10
+        ]
+    ]
+
+    a = [
+        [
+            hostname = "docs",
+            location = "185.199.108.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "docs",
+            location = "185.199.109.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "docs",
+            location = "185.199.110.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "docs",
+            location = "185.199.111.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "@",
+            location = "104.198.14.52",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "skyblock-minions",
+            location = "185.199.108.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "skyblock-minions",
+            location = "185.199.109.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "skyblock-minions",
+            location = "185.199.110.153",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "skyblock-minions",
+            location = "185.199.111.153",
+            cloudflare_is_proxied = true
+        ]
+    ]
+
+    cname = [
+        [
+            hostname = "www",
+            location = "rdil.netlify.com",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "www.skyblock-minions",
+            location = "rdil.github.io",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "privacy",
+            location = "rdil-privacy.netlify.com",
+            cloudflare_is_proxied = true
+        ],
+        [
+            hostname = "filehandlers",
+            location = "readthedocs.io",
+            cloudflare_is_proxied = false,
+            dns_managed_by = "readthedocs"
+        ],
+        [
+            hostname = "jasync",
+            location = "jasync.netlify.com",
+            cloudflare_is_proxied = true
+        ]
+    ]
+
+    spf = [
+        [
+            hostname = "@",
+            ttl = 3600,
+            value = "v=spf1 include:_spf.google.com ~all"
+        ]
+    ]
