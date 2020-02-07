@@ -7,6 +7,7 @@ provider = "Cloudflare"
 [[records]]
 
 [[records.txt]]
+
     [[records.txt.git]]
         hostname = "git"
         value = "https://github.com/RDIL"
@@ -50,83 +51,88 @@ provider = "Cloudflare"
         priority = 10
 
 [[records.a]]
-a = [
-    [
-        hostname = "docs",
-        location = "185.199.108.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "docs",
-        location = "185.199.109.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "docs",
-        location = "185.199.110.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "docs",
-        location = "185.199.111.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "@",
-        location = "104.198.14.52",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "skyblock-minions",
-        location = "185.199.108.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "skyblock-minions",
-        location = "185.199.109.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "skyblock-minions",
-        location = "185.199.110.153",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "skyblock-minions",
-        location = "185.199.111.153",
-        cloudflare_is_proxied = true,
-    ]
-]
-cname = [
-    [
-        hostname = "www",
-        location = "rdil.netlify.com",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "www.skyblock-minions",
-        location = "rdil.github.io",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "privacy",
-        location = "rdil-privacy.netlify.com",
-        cloudflare_is_proxied = true,
-    ],
-    [
-        hostname = "filehandlers",
-        location = "readthedocs.io",
-        cloudflare_is_proxied = false,
-        dns_managed_by = "readthedocs",
-    ],
-    [
-        hostname = "jasync",
-        location = "jasync.netlify.com",
-        cloudflare_is_proxied = true,
-    ]
-]
-spf = [
-    hostname = "@",
-    ttl = 3600,
-    value = "v=spf1 include:_spf.google.com ~all"
-]
+
+    [[records.a.docs1]]
+        hostname = "docs"
+        location = "185.199.108.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.docs2]]
+        hostname = "docs"
+        location = "185.199.109.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.docs3]]
+        hostname = "docs"
+        location = "185.199.110.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.docs4]]
+        hostname = "docs"
+        location = "185.199.111.153"
+        cloudflare_is_proxied = true
+
+    [[records.a."@"]]
+        hostname = "@"
+        location = "104.198.14.52"
+        cloudflare_is_proxied = true
+
+    [[records.a.skyblock-minions1]]
+        hostname = "skyblock-minions"
+        location = "185.199.108.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.skyblock-minions2]]
+        hostname = "skyblock-minions"
+        location = "185.199.109.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.skyblock-minions3]]
+        hostname = "skyblock-minions"
+        location = "185.199.110.153"
+        cloudflare_is_proxied = true
+
+    [[records.a.skyblock-minions4]]
+        hostname = "skyblock-minions"
+        location = "185.199.111.153"
+        cloudflare_is_proxied = true
+
+[[records.cname]]
+
+    [[records.cname.www]]
+        hostname = "www"
+        location = "rdil.netlify.com"
+        cloudflare_is_proxied = true
+
+    [[records.cname.www-skyblock-minions]]
+        hostname = "www.skyblock-minions"
+        location = "rdil.github.io"
+        cloudflare_is_proxied = true
+
+    [[records.cname.privacy]]
+        hostname = "privacy"
+        location = "rdil-privacy.netlify.com"
+        cloudflare_is_proxied = true
+
+    [[records.cname.filehandlers]]
+        hostname = "filehandlers"
+        location = "readthedocs.io"
+        cloudflare_is_proxied = false
+        dns_managed_by = "readthedocs"
+
+    [[records.cname.jasync]]
+        hostname = "jasync"
+        location = "jasync.netlify.com"
+        cloudflare_is_proxied = true
+
+    [[records.cname.backend]]
+        hostname = "backend"
+        location = "webapp-598447.pythonanywhere.com"
+        cloudflare_ruleset = "CUSTOM"
+
+[[records.spf]]
+
+    [[records.spf."@"]]
+        hostname = "@"
+        ttl = 3600
+        value = "v=spf1 include:_spf.google.com ~all"
