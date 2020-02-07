@@ -1,0 +1,15 @@
+{
+  "name": "rdilweb-dns-records",
+  "version": "1.0.0",
+  "repository": "https://github.com/rdilweb/DNS-Records.git",
+  "author": "Reece Dunham <me@rdil.rocks>",
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "prettier": "^1.19.1",
+    "prettier-plugin-toml": "^0.3.1"
+  },
+  "scripts": {
+    "prettier": "prettier --write records/**/*.toml"
+  }
+}
