@@ -8,8 +8,8 @@ provider = "Cloudflare"
 
 [[records.txt]]
     [[records.txt.git]]
-        hostname = "git",
-        value = "https://github.com/RDIL",
+        hostname = "git"
+        value = "https://github.com/RDIL"
         cloudflare_is_proxied = true
     
     [[records.txt."@"]]
@@ -22,33 +22,34 @@ provider = "Cloudflare"
         value = "v=DMARC1; p=quarantine; pct=5; rua=mailto:me@rdil.rocks"
         cloudflare_is_proxied = true
 
-mx = [
-    [
-        hostname = "@",
-        location = "aspmx.l.google.com",
-        priority = 1,
-    ],
-    [
-        hostname = "@",
-        location = "alt1.aspmx.l.google.com",
-        priority = 5,
-    ],
-    [
-        hostname = "@",
-        location = "alt2.aspmx.l.google.com",
-        priority = 5,
-    ],
-    [
-        hostname = "@",
-        location = "alt3.aspmx.l.google.com",
-        priority = 10,
-    ],
-    [
-        hostname = "@",
-        location = "alt4.aspmx.l.google.com",
-        priority = 10,
-    ]
-]
+[[records.mx]]
+
+    [[records.mx.main]]
+        hostname = "@"
+        location = "aspmx.l.google.com"
+        priority = 1
+    
+    [[records.mx.alt1]]
+        hostname = "@"
+        location = "alt1.aspmx.l.google.com"
+        priority = 5
+
+    [[records.mx.alt2]]
+        hostname = "@"
+        location = "alt2.aspmx.l.google.com"
+        priority = 5
+
+    [[records.mx.alt3]]
+        hostname = "@"
+        location = "alt3.aspmx.l.google.com"
+        priority = 10
+
+    [[records.mx.alt4]]
+        hostname = "@"
+        location = "alt4.aspmx.l.google.com"
+        priority = 10
+
+[[records.a]]
 a = [
     [
         hostname = "docs",
