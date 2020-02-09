@@ -1,0 +1,43 @@
+[domain]
+tld = "com"
+name = "hyperiumjailbreak"
+dnssec = true
+provider = "Cloudflare"
+
+[[records]]
+
+[[records.txt]]
+
+[[records.txt.git]]
+hostname = "git"
+value = "https://github.com/hyperiumjailbreak"
+cloudflare_is_proxied = true
+
+[[records.a]]
+
+[[records.a."@".1]]
+hostname = "@"
+location = "185.199.108.153"
+cloudflare_is_proxied = true
+
+[[records.a."@".2]]
+hostname = "@"
+location = "185.199.109.153"
+cloudflare_is_proxied = true
+
+[[records.a."@".3]]
+hostname = "@"
+location = "185.199.110.153"
+cloudflare_is_proxied = true
+
+[[records.a."@".4]]
+hostname = "@"
+location = "185.199.111.153"
+cloudflare_is_proxied = true
+
+[[records.cname]]
+
+[[records.cname.www]]
+hostname = "www"
+location = "hyperiumjailbreak.github.io"
+cloudflare_is_proxied = true
