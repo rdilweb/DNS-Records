@@ -77,36 +77,11 @@ hostname = "@"
 location = "104.198.14.52"
 cloudflare_is_proxied = true
 
-[[records.a.skyblock-minions1]]
-hostname = "skyblock-minions"
-location = "185.199.108.153"
-cloudflare_is_proxied = true
-
-[[records.a.skyblock-minions2]]
-hostname = "skyblock-minions"
-location = "185.199.109.153"
-cloudflare_is_proxied = true
-
-[[records.a.skyblock-minions3]]
-hostname = "skyblock-minions"
-location = "185.199.110.153"
-cloudflare_is_proxied = true
-
-[[records.a.skyblock-minions4]]
-hostname = "skyblock-minions"
-location = "185.199.111.153"
-cloudflare_is_proxied = true
-
 [[records.cname]]
 
 [[records.cname.www]]
 hostname = "www"
 location = "rdil.netlify.com"
-cloudflare_is_proxied = true
-
-[[records.cname.www-skyblock-minions]]
-hostname = "www.skyblock-minions"
-location = "rdil.github.io"
 cloudflare_is_proxied = true
 
 [[records.cname.privacy]]
