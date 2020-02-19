@@ -89,12 +89,6 @@ hostname = "privacy"
 location = "rdil-privacy.netlify.com"
 cloudflare_is_proxied = true
 
-[[records.cname.filehandlers]]
-hostname = "filehandlers"
-location = "readthedocs.io"
-cloudflare_is_proxied = false
-dns_managed_by = "readthedocs"
-
 [[records.cname.backend]]
 hostname = "backend"
 location = "webapp-598447.pythonanywhere.com"
