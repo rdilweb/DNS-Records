@@ -1,0 +1,37 @@
+[domain]
+tld = "club"
+name = "cakebot"
+dnssec = true
+provider = "Namecheap"
+
+[[records]]
+
+[[records.txt]]
+
+[[records.txt.git]]
+hostname = "git"
+value = "https://github.com/cakebotpro"
+
+[[records.a]]
+
+[[records.a.main1]]
+hostname = "@"
+location = "185.199.108.153"
+
+[[records.a.main2]]
+hostname = "@"
+location = "185.199.109.153"
+
+[[records.a.main3]]
+hostname = "@"
+location = "185.199.110.153"
+
+[[records.a.main4]]
+hostname = "@"
+location = "185.199.111.153"
+
+[[records.cname]]
+
+[[records.cname.www]]
+hostname = "www"
+location = "cakebotpro.github.io"
