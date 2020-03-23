@@ -94,6 +94,11 @@ hostname = "backend"
 location = "webapp-598447.pythonanywhere.com"
 cloudflare_ruleset = "CUSTOM"
 
+[[records.cname.cirrusbuilder]]
+hostname = "cirrusbuilder"
+location = "cirrusbuilder.netlify.com"
+cloudflare_is_proxied = true
+
 [[records.spf]]
 
 [[records.spf."@"]]
