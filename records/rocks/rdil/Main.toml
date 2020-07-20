@@ -81,12 +81,17 @@ cloudflare_is_proxied = true
 
 [[records.cname.www]]
 hostname = "www"
-location = "rdil.netlify.com"
+location = "rdil.netlify.app"
+cloudflare_is_proxied = true
+
+[[records.cname.cherry]]
+hostname = "www"
+location = "cherryclient.netlify.app"
 cloudflare_is_proxied = true
 
 [[records.cname.privacy]]
 hostname = "privacy"
-location = "rdil-privacy.netlify.com"
+location = "rdil-privacy.netlify.app"
 cloudflare_is_proxied = true
 
 [[records.cname.backend]]
@@ -96,8 +101,13 @@ cloudflare_ruleset = "CUSTOM"
 
 [[records.cname.cirrusbuilder]]
 hostname = "cirrusbuilder"
-location = "cirrusbuilder.netlify.com"
+location = "cirrusbuilder.netlify.app"
 cloudflare_is_proxied = true
+
+[[records.cname.cdn]]
+hostname = "cdn"
+location = "rdilcdn.imfast.io"
+cloudflare_is_externally_managed = true
 
 [[records.spf]]
 
