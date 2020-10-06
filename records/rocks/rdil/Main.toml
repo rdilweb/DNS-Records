@@ -84,11 +84,6 @@ hostname = "www"
 location = "rdil.netlify.app"
 cloudflare_is_proxied = true
 
-[[records.cname.cherry]]
-hostname = "www"
-location = "cherryclient.netlify.app"
-cloudflare_is_proxied = true
-
 [[records.cname.privacy]]
 hostname = "privacy"
 location = "rdil-privacy.netlify.app"
@@ -103,11 +98,6 @@ cloudflare_ruleset = "CUSTOM"
 hostname = "cirrusbuilder"
 location = "cirrusbuilder.netlify.app"
 cloudflare_is_proxied = true
-
-[[records.cname.cdn]]
-hostname = "cdn"
-location = "rdilcdn.imfast.io"
-cloudflare_is_externally_managed = true
 
 [[records.spf]]
 
