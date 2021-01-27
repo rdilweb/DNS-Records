@@ -84,11 +84,6 @@ hostname = "www"
 location = "rdil.netlify.app"
 cloudflare_is_proxied = true
 
-[[records.cname.privacy]]
-hostname = "privacy"
-location = "rdil-privacy.netlify.app"
-cloudflare_is_proxied = true
-
 [[records.cname.backend]]
 hostname = "backend"
 location = "webapp-598447.pythonanywhere.com"
